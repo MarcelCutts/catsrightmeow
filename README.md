@@ -1,18 +1,18 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # catsrightmeow
 Get cat video. Tap for more.
 =======
 # angular-seed — the seed for AngularJS apps
+=======
+# Cats right meow!
+>>>>>>> Took the Angular Seed project, and stripped out a lot of the stuff I wasn't planning to use. Set up naming and folders for the stuff I do plan to use.
 
-This project is an application skeleton for a typical [AngularJS](http://angularjs.org/) web app.
-You can use it to quickly bootstrap your angular webapp projects and dev environment for these
-projects.
+Go to app. Receive cat. Tap for more cat.
 
-The seed contains a sample AngularJS application and is preconfigured to install the Angular
-framework and a bunch of development and testing tools for instant web development gratification.
 
-The seed app doesn't do much, just shows how to wire two controllers and views together.
 
+<<<<<<< HEAD
 
 ## Getting Started
 
@@ -300,3 +300,6 @@ For more information on AngularJS please check out http://angularjs.org/
 [travis]: https://travis-ci.org/
 [http-server]: https://github.com/nodeapps/http-server
 >>>>>>> docs(README): add alternative git clone method
+=======
+### Templated by the Angular Seed project.
+>>>>>>> Took the Angular Seed project, and stripped out a lot of the stuff I wasn't planning to use. Set up naming and folders for the stuff I do plan to use.
