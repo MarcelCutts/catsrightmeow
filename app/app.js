@@ -2,5 +2,7 @@
 
 // Declare app level module which depends on views, and components
 angular.module('catsRightMeow', [
-  'ngRoute'
+    'ngRoute',
+    'catshuffle.controllers',
+    'catshuffle.services'
 ])
