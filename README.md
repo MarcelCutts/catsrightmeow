@@ -10,8 +10,11 @@ Get cat video. Tap for more.
 
 Go to app. Receive cat. Tap for more cat.
 
+## This code is awful and you should feel bad.
 
+Absolutely. Experimental HTML5 video project, interesting lessons learnt!
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 ## Getting Started
@@ -303,3 +306,7 @@ For more information on AngularJS please check out http://angularjs.org/
 =======
 ### Templated by the Angular Seed project.
 >>>>>>> Took the Angular Seed project, and stripped out a lot of the stuff I wasn't planning to use. Set up naming and folders for the stuff I do plan to use.
+=======
+### Videos provided by API chaps of GIPHY!
+### Templated by the Angular Seed project.
+>>>>>>> Excused self from code responsibility. That's a thing, right?
