@@ -1,9 +1,9 @@
 {
-  "name": "angular-seed",
+  "name": "catsrightmeow",
   "private": true,
   "version": "0.0.0",
-  "description": "A starter project for AngularJS",
-  "repository": "https://github.com/angular/angular-seed",
+  "description": "A cute cat-roulette of sorts",
+  "repository": "https://github.com/MarcelCutts/catsrightmeow",
   "license": "MIT",
   "devDependencies": {
     "karma": "~0.10",
