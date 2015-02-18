@@ -30,9 +30,12 @@
                 <img src="catpawt.svg" alt="Kiwi standing on oval" width="250px">
             </div>
 
-            <video autoplay loop poster="catposter.jpg" id="bgvid">
-                <!--  <source src="polina.webm" type="video/webm" id="webmSource"> -->
-                <source src="" type="video/mp4" id="mp4Source">
+            <video autoplay loop ngshow='currentPlayer==1' poster="catposter.jpg" id="bgvid1">
+                <source src="" type="video/mp4" id="mp4Source1">
+            </video>
+
+            <video autoplay ng-show='currentPlayer==2' loop id="bgvid2">
+            <source src="" type="video/mp4" id="mp4Source2">
             </video>
         </div>
     </div>

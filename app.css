@@ -4,7 +4,7 @@ html, body {
     height: 100%;
     text-align: center;
 }
-video#bgvid {
+video#bgvid1, video#bgvid2 {
     position: fixed;
     right: 0;
     bottom: 0;
