@@ -3,21 +3,30 @@
 
     angular.module('catshuffle.controllers', [])
 
-    .controller('CatsCtrl', ['$scope', '$sce', '$timeout', 'catSources',
-        function($scope, $sce, $timeout, catSources) {
+    /**
+     * Holds responsibility for the loading and displaying of cat
+     * videos. Seemless video transitions achieved by switching between
+     * 2 seperate video containers, and doing all load actions on the
+     * hidden on. Not pretty, but it's experimental HTML5 video on a 
+     * single threaded javascript environment.
+     * During all loading actions, the CSS of the loading-paw is adjusted
+     * to let the user know something is happening, albeit asynchronously.
+     */
+    .controller('CatsCtrl', ['$scope', '$timeout', 'catSources',
+        function($scope, $timeout, catSources) {
+        	// Grab th 2 video containers so we may attach listeners
             var backgroundVideo1 = document.getElementById('bgvid1');
             var backgroundVideo2 = document.getElementById('bgvid2');
 
-            $scope.isLoading = true;
-            $scope.catsReady = catSources.catsReady;
-            $scope.currentVideoPlayer = 1;
-            $scope.$watch('catsReady',
-                function(newValue, oldValue) {
-                    if (newValue.state) {
-                        $scope.shuffleCatVideo();
-                    }
-                }, true);
-
+            /**
+             * Listeners.
+             * Attached to video containers. When they detected a 'loadeddata'
+             * event in the video element, they cancel any loading animations
+             * and push themselves to the front through updating the current player.
+             * N.B. 'loadeddata' technically fires when the first frame is ready 
+             *      to go. While this is generally the point where no interruptions
+             *      will occur, they may persist with slow connections.
+             */
             backgroundVideo1.addEventListener('loadeddata', function() {
                 $scope.$apply(function() {
                     $scope.isLoading = false;
@@ -32,9 +41,25 @@
                 });
             }, false);
 
-            /**
-             * [shuffleCatVideo description]
-             * @return {[type]} [description]
+
+            // Video state controllers
+            $scope.isLoading = true;
+            $scope.currentVideoPlayer = 1;
+
+            // Initialisation code. Once cat sources are pulled
+            // from the service we are good to start displaying.
+            $scope.catsReady = catSources.catsReady;
+            $scope.$watch('catsReady',
+                function(newValue, oldValue) {
+                    if (newValue.state) {
+                        $scope.shuffleCatVideo();
+                    }
+                }, true);
+
+
+            /** 
+             * Fetches the next cat from the service and figures out
+             * which video container to load the new video into.
              */
             $scope.shuffleCatVideo = function() {
                 $scope.isLoading = true;
