@@ -11,7 +11,7 @@
     .factory('catSources', ['$rootScope', 'giphyDataAccess',
         function($rootScope, giphyDataAccess) {
 
-        	// On app start, fetch a group of cat media endpoints
+            // On app start, fetch a group of cat media endpoints
             giphyDataAccess.fetchCatUrls();
             $rootScope.catSources = giphyDataAccess.catSources;
             var catsReady = {
@@ -52,15 +52,15 @@
         }
     ])
 
-	/**
-	 * Gathers and filters data from a video source, which currently is GIPHY.
+    /**
+     * Gathers and filters data from a video source, which currently is GIPHY.
      * A pre builter parameterised URL is used to find 100 cat videos. The Urls
      * for the MP4 versins are then extraction via a simple map.
-	 */
+     */
     .factory('giphyDataAccess', ['$http', '$rootScope',
         function($http, $rootScope) {
 
-        	// Pre built URL for finding 'cute cats' of quantity 100
+            // Pre built URL for finding 'cute cats' of quantity 100
             var giphyCatUrl = "http://api.giphy.com/v1/gifs/search?q=cute+cat&api_key=dc6zaTOxFJmzC&limit=100";
             
             // Container for our MP4 urls
