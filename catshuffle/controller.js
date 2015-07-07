@@ -14,7 +14,7 @@
      */
     .controller('CatsCtrl', ['$scope', '$timeout', 'catSources',
         function($scope, $timeout, catSources) {
-        	// Grab th 2 video containers so we may attach listeners
+            // Grab th 2 video containers so we may attach listeners
             var backgroundVideo1 = document.getElementById('bgvid1');
             var backgroundVideo2 = document.getElementById('bgvid2');
 
