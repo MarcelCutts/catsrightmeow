@@ -19,6 +19,14 @@ video#bgvid1, video#bgvid2 {
 #catrefresh {
     margin: auto;
 }
+#catrefresh, img,  .paw {
+    filter: drop-shadow(0 2px 5px rgba(1, 1, 1, 0.5 ));
+    -webkit-filter: drop-shadow(0 2px 5px rgba(1, 1, 1, 0.5 ));
+    -o-filter: drop-shadow(0 2px 5px rgba(1, 1, 1, 0.5 ));
+    -ms-filter: drop-shadow(0 2px 5px rgba(1, 1, 1, 0.5 ));
+}
+
+
 .container {
     min-height: calc(100%);
     width: calc(100%);
