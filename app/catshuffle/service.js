@@ -58,7 +58,7 @@
      * for the MP4 versins are then extraction via a simple map.
 	 */
     .factory('giphyDataAccess', ['$http', '$rootScope',
-        function($http, $rootScope) {
+        function($http) {
 
         	// Pre built URL for finding 'cute cats' of quantity 100
             var giphyCatUrl = "//api.giphy.com/v1/gifs/search?q=cute+cat&api_key=dc6zaTOxFJmzC&limit=100";
@@ -90,11 +90,10 @@
                 return filteredCats;
             }
 
-
             return {
                 fetchCatUrls: fetchCatUrls,
                 catSources: filteredUrls
             };
         }
     ]);
-})();
+}());
